@@ -17,22 +17,28 @@ This userscript enhances Hacker News by adding support for common markdown forma
 
 ## Installation
 
-### Prerequisites
+### Option 1: Easy Installation via Greasy Fork (Recommended)
+1. Click the [Install button on Greasy Fork](https://greasyfork.org/en/scripts/547665-hn-markdown-formatter)
+2. Your userscript manager will automatically install the script
+3. That's it! The script will work immediately on Hacker News
+
+### Option 2: Manual Installation
+**Prerequisites:**
 You need a userscript manager browser extension:
 - [Tampermonkey](https://www.tampermonkey.net/) (Chrome, Firefox, Safari, Edge)
 - [Greasemonkey](https://www.greasespot.net/) (Firefox)
 - [Violentmonkey](https://violentmonkey.github.io/) (Chrome, Firefox, Edge)
 
-### Install the Script
+**Install the Script:**
 1. Install a userscript manager (Tampermonkey recommended)
 2. Click on the userscript manager icon in your browser
 3. Select "Create a new script" or "Add new script"
-4. Copy and paste the contents of `hn-markdown-formatter.user.js` into the editor
+4. Copy and paste the contents of `hn-format.user.js` into the editor
 5. Save the script (Ctrl+S or Cmd+S)
 
-Alternatively, if you have the raw script file:
+**Alternative manual method:**
 1. Open your userscript manager dashboard
-2. Drag and drop the `hn-markdown-formatter.user.js` file onto the dashboard
+2. Drag and drop the `hn-format.user.js` file onto the dashboard
 
 ## Usage
 
@@ -95,17 +101,12 @@ The script:
 
 ## Technical Details
 
-- **Target Sites**: `*://news.ycombinator.com/*`
+- **Target Sites**: `http://news.ycombinator.com/*` and `https://news.ycombinator.com/*`
 - **Permissions**: No special permissions required (`@grant none`)
 - **Execution**: Runs after page load (`@run-at document-end`)
 - **Compatibility**: Works with HN's dynamic content loading
 
 ## Features in Detail
-
-### Security
-- HTML entities are properly escaped to prevent XSS attacks
-- Existing HN links are preserved during processing
-- Only processes text content, not executable code
 
 ### Performance
 - Uses MutationObserver for efficient dynamic content detection
@@ -117,53 +118,14 @@ The script:
 - Responsive and accessible formatting
 - Proper contrast and readability
 
-## Browser Compatibility
-
-Works in all modern browsers that support:
-- ES6+ JavaScript features
-- MutationObserver API
-- CSS3 styling
-
-Tested with:
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## Contributing
-
-Feel free to submit issues or pull requests to improve the script. Common areas for enhancement:
-- Additional markdown syntax support
-- Improved styling
-- Performance optimizations
-- Bug fixes
-
 ## License
 
-This project is open source. Feel free to modify and distribute according to your needs.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Version History
+The MIT License allows you to:
+- Use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software
+- Use the software for any purpose, including commercial use
+- Modify the software and distribute modified versions
+- The only requirement is that the original copyright notice and license must be included in all copies
 
-- **v1.0**: Initial release with basic markdown formatting support
-  - Bold, italic, underline text
-  - Code blocks and inline code
-  - Blockquotes and bullet points
-  - Dynamic content support
-
-## Troubleshooting
-
-**Script not working?**
-- Ensure your userscript manager is enabled
-- Check that the script is active in your userscript manager
-- Refresh the Hacker News page
-- Check browser console for any error messages
-
-**Formatting not appearing?**
-- Make sure you're using the correct markdown syntax
-- The script only processes new content after installation
-- Try refreshing the page to reprocess existing content
-
-**Conflicts with other extensions?**
-- Disable other HN-related extensions temporarily to test
-- Check if other userscripts are interfering
-- Ensure this script loads after page content
+For the full license text, see [LICENSE](LICENSE).
