@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HN Markdown Formatter
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Add support for quotes, bold, underline, code blocks, and bullet points on Hacker News
 // @author       sacrosaunt
 // @match        http://news.ycombinator.com/*
