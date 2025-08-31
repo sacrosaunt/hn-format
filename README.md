@@ -7,7 +7,6 @@ A userscript that adds markdown-style formatting support to [Hacker News](https:
 - Adds markdown formatting support to HN comments and posts
 - Supports **bold**, *italic*, <u>underlined</u>, `code`, and more
 - Works automatically on all HN pages
-- Preserves existing HN functionality
 
 ## Installation
 
